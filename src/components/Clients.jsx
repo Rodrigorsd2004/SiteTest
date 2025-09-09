@@ -8,8 +8,7 @@ import clientsData from "../data/clients";
 export default function Clients() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCount = 4; // Quantos logos aparecem de cada vez
-
-  const maxIndex = clientsData.length - visibleCount; // índice máximo permitido
+  const maxIndex = clientsData.length - visibleCount;
 
   const next = () => {
     if (currentIndex < maxIndex) setCurrentIndex(currentIndex + 1);
@@ -49,6 +48,7 @@ export default function Clients() {
           <FaChevronRight />
         </button>
 
+        {/* Container dos logos sem scrollbar */}
         <div className="flex gap-8 overflow-hidden">
           {visibleClients.map((logo, idx) => (
             <motion.div
