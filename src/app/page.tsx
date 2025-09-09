@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans text-gray-800 overflow-x-hidden">
       <Navbar />
       <Hero />
       <section id="projects" className="py-20 bg-gray-50">
